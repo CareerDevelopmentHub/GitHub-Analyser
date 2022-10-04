@@ -273,22 +273,23 @@ footer{
   height: 50px;
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
   background-color: #5d90ac;
 }
 
 .rd1{
-  position: absolute;
   font-size: 15px;
-  top: 755px;
-  left: 230px;
 }
 .rd2{
-  position: absolute;
   display: flex;
   justify-content: space-around;
+  align-items: center;
   gap: 20px;
-  left: 1150px;
-  top: 753px;
+}
+
+.footerParagraph{
+  display: flex;
+  justify-content: center;
 }
 /* footer css ends here  */
 

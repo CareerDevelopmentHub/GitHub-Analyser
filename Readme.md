@@ -15,7 +15,7 @@ In the recent times, GitHub has evolved from more than being a place to keep a r
 <p align="center">
   Wanna contribute? Yeah, it's open for all✌. <br><br>
   </p>
-1) Fork this repository. Raise an [issue](https://github.com/CareerDevelopmentHub/Github-Analyser/issues) on whatever bug fix or feature you want to work on.<br>
+1) Fork this repository. Raise an <a href="https://github.com/CareerDevelopmentHub/Github-Analyser/issues" target="_blank">issue</a> on whatever bug fix or feature you want to work on.<br>
 2) Make your changes, add features you wish to have<br>
 3) Generate a Pull Request.<br><br>
 4) And after working on your fix before creating a pull request make sure you check out the following points:

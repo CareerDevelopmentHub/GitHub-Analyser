@@ -241,7 +241,9 @@ div.info a:hover {
 
 /* footer css starts here */
 footer{
-  background-color:  #ec5d10;
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
 }
 
 .social-icons li {

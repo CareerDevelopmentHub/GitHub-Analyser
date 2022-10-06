@@ -94,7 +94,42 @@ let users;
 
 
 // FIlter states
+async function searchUser(searchText, id, search) {
+  const matchList = document.getElementById(id);
+  if (searchText !== "") {
+    const res = await fetch(
+      `https://api.github.com/search/users?q=${searchText}`
+    );
+    users = await res.json();
+    if (users.total_count === 0) {
+      matchList.innerHTML = "";
+    } else {
+      let matches;
+      matches = users.items.filter((user) => {
+        const regex = new RegExp(`^${searchText}`, "gi");
+        return user.login.match(regex);
+      });
 
+      const html = matches
+        .slice(0, 5)
+        .map(
+          (match) => `<div class="autocomplete">
+        <p style="padding-top: 15px;font-weight:600"><img class="img" src=${match.avatar_url}/> ${match.login}</p>
+        </div>`
+        )
+        .join("");
+      matchList.innerHTML = html;
+      matchList.addEventListener("click", (e) => {
+        search.value = e.target.textContent.trim();
+        matchList.style.display = "none";
+        matchList.innerHTML = "";
+      });
+      matchList.style.display = "block";
+    }
+  } else {
+    matchList.innerHTML = "";
+  }
+}
 
 search.addEventListener(
   "input",
